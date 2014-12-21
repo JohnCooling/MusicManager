@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>uikit-addons</id>
+    <version>2.9.0</version>
+    <title>uikit-addons</title>
+    <authors>YOOtheme</authors>
+    <owners>YOOtheme</owners>
+    <licenseUrl>https://github.com/uikit/uikit/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>http://getuikit.com/docs/addons.html</projectUrl>
+    <iconUrl>http://i.imgur.com/1Z0mIUX.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>All kinds of useful, additional components which are not included in UIkit itself.</description>
+    <tags>uikit front-end framework ui addons</tags>
+    <dependencies>
+      <dependency id="uikit" version="2.6.0" />
+    </dependencies>
+  </metadata>
+</package>

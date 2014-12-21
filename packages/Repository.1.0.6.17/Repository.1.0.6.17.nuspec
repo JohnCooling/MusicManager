@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Repository</id>
+    <version>1.0.6.17</version>
+    <title>Repository</title>
+    <authors>Matthew Schrager</authors>
+    <owners>Matthew Schrager</owners>
+    <licenseUrl>https://github.com/matthewschrager/Repository#license</licenseUrl>
+    <projectUrl>https://github.com/matthewschrager/Repository</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A generic implementation for the repository pattern in C#.</description>
+    <copyright>Copyright Matthew Schrager 2013</copyright>
+    <tags>Repository</tags>
+    <dependencies>
+      <dependency id="AutoMapper" />
+      <dependency id="CompareNETObjects" />
+      <dependency id="Newtonsoft.Json" version="5.0.6" />
+      <dependency id="NUnit" version="2.6.2" />
+    </dependencies>
+  </metadata>
+</package>

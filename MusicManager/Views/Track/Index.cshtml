@@ -1,0 +1,48 @@
+﻿@using MvcPaging
+@model List<DomainModel.FileMetaData>
+
+@{
+    ViewBag.Title = "Music Tracks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Track Directory</h1>
+
+@using (Ajax.BeginForm("Index", "Track",
+                            new AjaxOptions { UpdateTargetId = "grid-list", HttpMethod = "get", LoadingElementId = "loading", OnBegin = "beginPaging", OnSuccess = "successPaging", OnFailure = "failurePaging" },
+                            new { id = "frm-search" }))
+{
+
+    <form class="form-inline" role="form">
+        <div class="input-group search">
+            <input id="Search" type="text" class="form-control" placeholder="Search" name="song_name" />
+            <span class="input-group-addon">
+                <i class="fa fa-search"></i>
+            </span>
+        </div>
+    </form>
+    
+    <div id="grid-list">
+        @{ Html.RenderPartial("_AjaxFileList", Model); }
+    </div>
+       
+}
+
+<script type="text/javascript">
+
+    function beginPaging(args) {
+        // Animate
+        $('#grid-list').fadeOut('normal');
+    }
+
+    function successPaging() {
+        // Animate
+        $('#grid-list').fadeIn('normal');
+        $('a').tooltip();
+    }
+
+    function failurePaging() {
+        alert("Could not retrieve list.");
+    }
+
+</script>

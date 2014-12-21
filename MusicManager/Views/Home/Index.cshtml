@@ -1,0 +1,92 @@
+﻿@model IEnumerable<DomainModel.FileMetaData>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <div class="container">
+        
+        <h1>Music Manager</h1><h3>Your Music Tagging Solution</h3>
+        <div class="row">
+            <div class="col-lg-7">
+                <p>
+                    This is your new solution to managing all of your metadata for your music. To begin using this tool, you will need to scan your Music Directory. All of the information that is collected is only viewable by you.
+                    We do not record or pass any information to third parties.
+                </p>
+            </div>
+
+            <div class="col-lg-4">
+                <a class="btn btn-primary btn-lg" href="../FileScanner/Index">Get Started »</a>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-3">
+        <h2><i class="glyphicon glyphicon-plus"></i>Recently Added Files</h2>
+        @foreach (var item in Model)
+        {
+            <div class="track-wrapper">
+                <div class="album-art">
+                    <img id="zoom_01" src="http://revistasindromes.com/images/100x100.gif" data-zoom-image="http://downloadwallpaperhd.com/wp-content/uploads/2013/06/Katy-Perry-Wide-HD-Wallpaper.jpg" />
+                </div>
+                <div class="track-info-wrapper">
+                    <div class="artist-name">
+                        @Html.DisplayFor(modelItem => item.Artist)
+                    </div>
+
+                    <div class="track-name">
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </div>
+
+                    <div class="album-name">
+                        @Html.DisplayFor(modelItem => item.Album)
+                    </div>
+
+                    <div class="album-year">
+                        @Html.DisplayFor(modelItem => item.Year)
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+    <div class="col-lg-3">
+        <h2><i class="glyphicon glyphicon-dashboard"></i>Updated Files</h2>
+
+    </div>
+
+    <div class="col-lg-3">
+        <h2><i class="glyphicon glyphicon-folder-close"></i>Current Files</h2>
+
+    </div>
+
+    <div class="col-lg-3">
+        <h2><i class="glyphicon glyphicon-headphones"></i>Manager Stats</h2>
+        Total Tracks: @ViewBag.FileCount
+
+    </div>
+</div>
+
+<div class="row">
+
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#zoom_01").elevateZoom({
+            zoomWindowWidth: 300,
+            zoomWindowHeight: 300,
+            zoomWindowFadeIn: 500,
+            zoomWindowFadeOut: 500,
+            lensFadeIn: 500,
+            lensFadeOut: 500
+        });
+    });
+</script>

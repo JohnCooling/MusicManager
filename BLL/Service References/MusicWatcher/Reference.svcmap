@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="be980d7c-6b77-4cdd-8d54-9ef632258aed" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/MusicWatcher/WCF_Service" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCF_Service.disco" MetadataType="Disco" ID="c3ffcea4-c864-4e6d-9434-04189702af48" SourceId="1" SourceUrl="http://localhost:8000/MusicWatcher/WCF_Service?disco" />
+    <MetadataFile FileName="WCF_Service.xsd" MetadataType="Schema" ID="1323afb7-8446-4372-9e47-ac212bf2d869" SourceId="1" SourceUrl="http://localhost:8000/MusicWatcher/WCF_Service?xsd=xsd2" />
+    <MetadataFile FileName="WCF_Service1.xsd" MetadataType="Schema" ID="c2dd447d-7c40-4919-a520-46aa1439084d" SourceId="1" SourceUrl="http://localhost:8000/MusicWatcher/WCF_Service?xsd=xsd1" />
+    <MetadataFile FileName="WCF_Service.wsdl" MetadataType="Wsdl" ID="fce68859-90c6-4d63-9a8b-4fd26fcecd98" SourceId="1" SourceUrl="http://localhost:8000/MusicWatcher/WCF_Service?wsdl=wsdl0" />
+    <MetadataFile FileName="MusicWatcherWCF.wsdl" MetadataType="Wsdl" ID="56e98bc8-1557-4b2e-a239-9b80579adf40" SourceId="1" SourceUrl="http://localhost:8000/MusicWatcher/WCF_Service?wsdl" />
+    <MetadataFile FileName="WCF_Service2.xsd" MetadataType="Schema" ID="f1b2fde3-a71c-479c-8be2-030290d0a82a" SourceId="1" SourceUrl="http://localhost:8000/MusicWatcher/WCF_Service?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

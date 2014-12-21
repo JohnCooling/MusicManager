@@ -1,0 +1,79 @@
+﻿@using MvcPaging
+@model IPagedList<DomainModel.FileMetaData>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                Track Number
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Artist
+            </th>
+            <th>
+                Album
+            </th>
+            <th>
+                Year
+            </th>
+            <th>
+                BPM
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.TrackNumber
+                </td>
+                
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Artist
+                </td>
+                <td>
+                    @item.Album
+                </td>
+                <td>
+                    @item.Year
+                </td>
+                <td>
+                    @item.BPM
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@Html.Raw(Ajax.Pager(
+            new Options
+            {
+                PageSize = Model.PageSize,
+                TotalItemCount = Model.TotalItemCount,
+                CurrentPage = Model.PageNumber,
+                ItemTexts = new ItemTexts() { Next = "", Previous = "", Page = "" },
+                ItemIcon = new ItemIcon() { First = "fa fa-fast-backward", Previous = "fa fa-backward", Next = "fa fa-forward", Last = "fa fa-fast-forward" },
+                TooltipTitles = new TooltipTitles() { Next = "Next page", Previous = "Previous page", Page = "Page {0}." },
+                Size = Size.normal,
+                Alignment = Alignment.centered,
+                IsShowControls = true,
+                IsShowFirstLast = true,
+                CssClass = "center-block"
+            },
+            new AjaxOptions
+            {
+                UpdateTargetId = "grid-list",
+                OnBegin = "beginPaging",
+                OnSuccess = "successPaging",
+                OnFailure = "failurePaging"
+            }, new { controller = "Track", action = "Index", song_name = ViewData["song_name"] }))
+<div class="text-center">
+    Showing <span class="badge badge-success">@Model.ItemEnd</span>
+    of <span class="badge badge-info">@Model.TotalItemCount</span> songs
+</div>
